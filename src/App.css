@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: #020230;
+  color: white;
+}
+.main {
+  flex: 3;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("./assets//bg.jpg");
+  position: relative;
+}
+.endText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  top: 40vh;
+  left: 20pc;
+}
+.bottom {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50vh;
+  left: 23pc;
+}
+.pyramid {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.moneyList {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moneyListItem {
+  padding: 10px;
+  display: flex;
+}
+.moneyListItem.active {
+  background-color: teal;
+}
+.moneyListItemNumber {
+  /* border: 2px solid; */
+  font-size: 18px;
+  font-weight: 100;
+  width: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.moneyListItemAmount {
+  font-size: 20px;
+  font-weight: 300;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.start {
+  width: 250px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.startInput {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.startInput:focus {
+  outline: none;
+}
+
+.startButton {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
 }
